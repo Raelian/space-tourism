@@ -1,0 +1,200 @@
+@use "../../styles/descriptions" as *;
+
+$large-width: 24rem;
+$extra-large-width: 36rem;
+
+@keyframes border-effect {
+    0%, 100% { width: 50%;}
+    50% {width: 90%;}
+}
+
+.crew-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .img-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        border-bottom: solid .1rem rgb(97, 100, 118);
+        animation: border-effect 5s ease-in-out infinite;
+
+        .crew-img {
+            max-height: 14rem;
+        }
+    }
+
+    .crew-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        li {
+            button {
+                width: .6rem;
+                height: .6rem;
+                background-color: rgb(151, 151, 151);
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color .3s linear;
+            }
+
+            .active {
+                background-color: white;
+            }
+        }
+    }
+
+    .crew-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 2rem;
+
+        .crew-title {
+            text-transform: uppercase;
+            color: rgba(151, 151, 151);
+            font-size: .8rem;
+            font-weight: 100;
+            font-family: var(--primary-font), sans-serif;
+        }
+
+        .crew-name {
+            text-transform: uppercase;
+            color: var(--tertiary-color);
+            font-size: 1.2rem;
+            font-weight: 100;
+            font-family: var(--primary-font), sans-serif;
+            letter-spacing: .1rem;
+        }
+
+        .crew-bio {
+            @include text-description-style-mobile;
+            text-align: center;
+            max-width: 21rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .crew-container {
+
+        .img-wrapper:nth-child(1){order: 3;}
+        .crew-nav:nth-child(2){order: 2;}
+        .crew-details:nth-child(3){order: 1;}
+
+        .crew-header {
+            font-size: .8rem;
+            align-self: flex-start;
+    
+            span {
+                font-size: .8rem;
+            }
+        }
+    
+        .img-wrapper {
+            width: auto;
+            border-bottom: none;
+    
+            .crew-img {
+                max-height: 30rem;
+            }
+        }
+
+        .crew-nav {
+            margin-top: .8rem;
+            gap: 1.5rem;
+
+            li {
+                button {
+                    width: .8rem;
+                    height: .8rem;
+                }
+            }
+        }
+    
+        .crew-details {
+            .crew-title {
+                font-size: 1rem;
+            }
+    
+            .crew-name {
+                font-size: 1.5rem;
+            }
+    
+            .crew-bio {
+                @include text-description-style-tablet;
+                max-width: 22rem;
+                min-height: 6rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .crew-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+
+        .img-wrapper:nth-child(1){grid-column: 2; grid-row: 1 /span 3;}
+        .crew-nav:nth-child(2){grid-column: 1; grid-row: 2;}
+        .crew-details:nth-child(3){grid-column: 1; grid-row: 1;}
+    
+        .img-wrapper {
+            margin: 0 auto;
+
+            .crew-img {
+                max-height: 50rem;
+            }
+        }
+
+        .crew-nav {
+            width: $large-width;
+            margin: 5rem auto 0;
+        }
+    
+        .crew-details {
+            width: $large-width;
+            padding: 0;
+            align-items: start;
+            margin: 7rem auto 0;
+            gap: 0;
+
+            .crew-title {
+                font-size: 2.2rem;
+            }
+    
+            .crew-name {
+                font-size: 3.1rem;
+                text-wrap: wrap;
+                min-height: 7.5rem;
+                place-content: center;
+            }
+    
+            .crew-bio {
+                @include text-description-style-desktop;
+                text-align: left;
+                max-width: 24rem;
+                min-height: 10rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .crew-container {
+
+        .crew-nav {
+            width: $extra-large-width;
+        }
+    
+        .crew-details {
+            width: $extra-large-width;
+        }
+    }
+}

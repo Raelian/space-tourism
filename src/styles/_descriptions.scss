@@ -1,0 +1,17 @@
+@mixin text-description-style-mobile {
+    font-family: var(--secondary-font), sans-serif;
+    color: var(--secondary-color);
+    font-size: .9rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+}
+
+@mixin text-description-style-tablet {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+@mixin text-description-style-desktop {
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
