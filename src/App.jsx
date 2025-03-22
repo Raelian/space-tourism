@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
 import Layout from "./components/layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
-import Crew from './pages/crew/Crew.jsx';
+import Crew from "./pages/crew/Crew.jsx";
 import Destination from './pages/destination/Destination.jsx';
 import Technology from './pages/technology/Technology.jsx';
 
