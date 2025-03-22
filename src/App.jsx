@@ -9,7 +9,7 @@ import Technology from './pages/technology/Technology.jsx';
 
 function App() {
   return (
-      <Router>
+      <Router basename='/space-tourism'>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
