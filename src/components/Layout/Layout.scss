@@ -1,18 +1,18 @@
-$bg-home-desktop: url("images/home/background-home-desktop.jpg");
-$bg-home-tablet: url("images/home/background-home-tablet.jpg");
-$bg-home-mobile: url("images/home/background-home-mobile.jpg");
+$bg-home-desktop: url("/images/home/background-home-desktop.jpg");
+$bg-home-tablet: url("/images/home/background-home-tablet.jpg");
+$bg-home-mobile: url("/images/home/background-home-mobile.jpg");
 
-$bg-destination-desktop: url("images/destination/background-destination-desktop.jpg");
-$bg-destination-tablet: url("images/destination/background-destination-tablet.jpg");
-$bg-destination-mobile: url("images/destination/background-destination-mobile.jpg");
+$bg-destination-desktop: url("/images/destination/background-destination-desktop.jpg");
+$bg-destination-tablet: url("/images/destination/background-destination-tablet.jpg");
+$bg-destination-mobile: url("/images/destination/background-destination-mobile.jpg");
 
-$bg-crew-desktop: url("images/crew/background-crew-desktop.jpg");
-$bg-crew-tablet: url("images/crew/background-crew-tablet.jpg");
-$bg-crew-mobile: url("images/crew/background-crew-mobile.jpg");
+$bg-crew-desktop: url("/images/crew/background-crew-desktop.jpg");
+$bg-crew-tablet: url("/images/crew/background-crew-tablet.jpg");
+$bg-crew-mobile: url("/images/crew/background-crew-mobile.jpg");
 
-$bg-technology-desktop: url("images/technology/background-technology-desktop.jpg");
-$bg-technology-tablet: url("images/technology/background-technology-tablet.jpg");
-$bg-technology-mobile: url("public/images/technology/background-technology-mobile.jpg");
+$bg-technology-desktop: url("/images/technology/background-technology-desktop.jpg");
+$bg-technology-tablet: url("/images/technology/background-technology-tablet.jpg");
+$bg-technology-mobile: url("/images/technology/background-technology-mobile.jpg");
 
 @mixin responsive-bg($desktop, $tablet, $mobile) {
     background-image: $desktop;
