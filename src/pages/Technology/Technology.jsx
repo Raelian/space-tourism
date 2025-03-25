@@ -32,6 +32,7 @@ const technology = [
 
 const Technology = () => {
     const [tech, setTech] = useState(0);
+    const [loading, setLoading] = useState(true);
     const [resizedImage, setResizedImage] = useState(technology[tech].imageLandscape);
 
     const changeTechIndex = (index) => {
@@ -39,22 +40,16 @@ const Technology = () => {
     }
 
     useEffect(() => {
-        const updateImage = () => {
-            const currentTech = technology[tech];
-            if (window.innerWidth >= 1024) { 
-                setResizedImage(currentTech.imagePortrait);
-            } else {  
-                setResizedImage(currentTech.imageLandscape);
-            }
+        setLoading(true);
+        const currentTech = technology[tech];
+        const newImage = window.innerWidth >= 1024 ? currentTech.imagePortrait : currentTech.imageLandscape;
+
+        const img = new Image();
+        img.src = newImage;
+        img.onload = () => {
+            setResizedImage(newImage);
+            setLoading(false);
         };
-
-        updateImage(); 
-
-        
-        window.addEventListener("resize", updateImage);
-
-        
-        return () => window.removeEventListener("resize", updateImage);
     }, [tech]);  
 
     return (
@@ -64,11 +59,11 @@ const Technology = () => {
                     src={resizedImage} 
                     alt={technology[tech].name} 
                     className="technology-img"
-                    key={technology[tech].name}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={fadeVariants}
+                    key={tech}
+                    initial={{opacity: 0}}
+                    animate={{opacity: loading ? 0.5 : 1}}
+                    exit={{opacity: 0}}
+                    transition={{ duration: 0.5}}
                 />
             </AnimatePresence>
             <ul className="technology-nav">
