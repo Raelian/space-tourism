@@ -10,57 +10,57 @@
 }
 
 .home-page {
-  background-image: url("images/home/background-home-desktop.jpg");
+  background-image: url("/images/home/background-home-desktop.jpg");
 }
 @media (max-width: 1024px) {
   .home-page {
-    background-image: url("images/home/background-home-tablet.jpg");
+    background-image: url("/images/home/background-home-tablet.jpg");
   }
 }
 @media (max-width: 768px) {
   .home-page {
-    background-image: url("images/home/background-home-mobile.jpg");
+    background-image: url("/images/home/background-home-mobile.jpg");
   }
 }
 
 .crew-page {
-  background-image: url("images/crew/background-crew-desktop.jpg");
+  background-image: url("/images/crew/background-crew-desktop.jpg");
 }
 @media (max-width: 1024px) {
   .crew-page {
-    background-image: url("images/crew/background-crew-tablet.jpg");
+    background-image: url("/images/crew/background-crew-tablet.jpg");
   }
 }
 @media (max-width: 768px) {
   .crew-page {
-    background-image: url("images/crew/background-crew-mobile.jpg");
+    background-image: url("/images/crew/background-crew-mobile.jpg");
   }
 }
 
 .technology-page {
-  background-image: url("images/technology/background-technology-desktop.jpg");
+  background-image: url("/images/technology/background-technology-desktop.jpg");
 }
 @media (max-width: 1024px) {
   .technology-page {
-    background-image: url("images/technology/background-technology-tablet.jpg");
+    background-image: url("/images/technology/background-technology-tablet.jpg");
   }
 }
 @media (max-width: 768px) {
   .technology-page {
-    background-image: url("public/images/technology/background-technology-mobile.jpg");
+    background-image: url("/images/technology/background-technology-mobile.jpg");
   }
 }
 
 .destination-page {
-  background-image: url("images/destination/background-destination-desktop.jpg");
+  background-image: url("/images/destination/background-destination-desktop.jpg");
 }
 @media (max-width: 1024px) {
   .destination-page {
-    background-image: url("images/destination/background-destination-tablet.jpg");
+    background-image: url("/images/destination/background-destination-tablet.jpg");
   }
 }
 @media (max-width: 768px) {
   .destination-page {
-    background-image: url("images/destination/background-destination-mobile.jpg");
+    background-image: url("/images/destination/background-destination-mobile.jpg");
   }
 }/*# sourceMappingURL=Layout.css.map */

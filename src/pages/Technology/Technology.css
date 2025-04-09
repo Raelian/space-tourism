@@ -100,9 +100,15 @@
     margin: 0 auto;
   }
   .technology-container .technology-img {
+    position: relative;
+    aspect-ratio: 1/1;
     order: 3;
     flex: 1;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
   }
   .technology-container .technology-nav {
     order: 1;
