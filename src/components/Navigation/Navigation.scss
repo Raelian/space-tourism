@@ -1,5 +1,5 @@
-$bg-burger: url("/images/shared/icon-hamburger.svg");
-$bg-close: url("/images/shared/icon-close.svg");
+$bg-burger: url("images/shared/icon-hamburger.svg");
+$bg-close: url("images/shared/icon-close.svg");
 
 @mixin link-num-style {
     color: var(--tertiary-color);
