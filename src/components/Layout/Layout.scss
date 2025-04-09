@@ -12,7 +12,7 @@ $bg-crew-mobile: url("images/crew/background-crew-mobile.jpg");
 
 $bg-technology-desktop: url("images/technology/background-technology-desktop.jpg");
 $bg-technology-tablet: url("images/technology/background-technology-tablet.jpg");
-$bg-technology-mobile: url("public/images/technology/background-technology-mobile.jpg");
+$bg-technology-mobile: url("images/technology/background-technology-mobile.jpg");
 
 @mixin responsive-bg($desktop, $tablet, $mobile) {
     background-image: $desktop;
