@@ -91,6 +91,7 @@
   .crew-container .img-wrapper {
     width: auto;
     border-bottom: none;
+    animation: none;
   }
   .crew-container .img-wrapper .crew-img {
     max-height: 30rem;
